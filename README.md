@@ -6,6 +6,10 @@ This is a super simple server that uses [es-react](https://github.com/lukejackso
 
 The only dependency is deno, but there's a Makefile to simplify building and running the code. If you're on a *nix system, just run `make run` to bundle and start the server
 
+## Back to Makefiles?
+
+It's not ideal, but I'm unaware of any good deno build tools
+
 ## Typescript?
 
 It's not using typescript because I had trouble getting deno to run tsx. Still troubleshooting...
