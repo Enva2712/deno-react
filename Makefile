@@ -1,21 +1,22 @@
-OUTDIR="public"
+PUBLICDIR="public"
 
+.SILENT:
 .PHONY: build run fmt clean
 
-build: server.js $(OUTDIR)/bundle.js
+build: server.js $(PUBLICDIR)/bundle.js
 
 run: build
 	deno run --allow-net --allow-read server.js
 
 fmt:
-	@deno fmt src
+	deno fmt src
 
 clean:
-	@rm -rf $(OUTDIR) server.js
+	rm -rf $(PUBLICDIR) server.js
 
 server.js:
-	@deno bundle ./src/server.jsx server.js
+	deno bundle ./src/server.jsx server.js
 
-$(OUTDIR)/bundle.js:
-	@mkdir $(OUTDIR)
-	@deno bundle ./src/browser.jsx $(OUTDIR)/bundle.js
+$(PUBLICDIR)/bundle.js:
+	- mkdir $(PUBLICDIR) 2>/dev/null
+	deno bundle ./src/browser.jsx $(PUBLICDIR)/bundle.js
