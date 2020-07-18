@@ -3,7 +3,7 @@ import Counter from "./counter.jsx";
 
 export default function App(props) {
   return (<>
-    <p>This is react in Deno!</p>
+    <p>This is server rendered react in Deno!</p>
     <Counter />
   </>);
 }
