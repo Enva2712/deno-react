@@ -12,4 +12,4 @@ It's not ideal, but I'm unaware of any good deno build tools
 
 ## Typescript?
 
-It's not using typescript because I had trouble getting deno to run tsx. Still troubleshooting...
+Deno doesn't specify the `JSX.IntrinsicElements` interface, and I didn't know about it when I started, so I didn't use typescript.
